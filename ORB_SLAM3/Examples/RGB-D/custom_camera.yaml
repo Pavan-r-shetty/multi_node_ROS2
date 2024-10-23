@@ -1,0 +1,79 @@
+%YAML:1.0
+Camera.type: "PinHole"
+# Camera.type: "KannalaBrandt8"
+
+
+
+
+
+
+# Camera Parameters. Adjust for your camera setup.
+Camera.fx: 348.925
+Camera.fy: 351.135
+Camera.cx: 339.075
+Camera.cy: 177.45
+
+
+# Stereo baseline in meters for stereo cameras
+Camera.bf: 41.871 #0.120 * 348.925  # This is baseline times fx
+
+
+# For RGB-D cameras, this is the depth scale factor (if applicable)
+# Set this to 1 if depth images provide depth in meters.
+DepthMapFactor: 5000.0  # Adjust based on your camera (e.g., 5000.0 for certain cameras)
+
+
+# Distortion model and coefficients
+# These are assumed to be 0 if unknown, but replace with actual values if available
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+
+# Frame rate (adjust based on your camera)
+# Camera.fps: 30 #30.0
+
+
+# Color order in images (options: RGB or BGR)
+Camera.RGB: 0
+
+
+# Depth map settings
+Camera.width: 1280  # Image width
+Camera.height: 720  # Image height
+
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+
+
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
+
+# Depth threshold for far points
+# ThDepth: 40.0  # Depth threshold in meters
+ThDepth: 20.0  # Depth threshold in meters
+
+# ORB Extractor settings for the left (RGB) camera
+ORBextractor.nFeatures: 6000 #1500  # Number of features to extract
+ORBextractor.scaleFactor: 1.2  # Scale factor between levels in the scale pyramid
+# ORBextractor.scaleFactor: 1.1  # A smaller value gives more precise multi-scale feature detection
+
+
+ORBextractor.nLevels: 8  # Number of levels in the scale pyramid
+# ORBextractor.iniThFAST: 20  # FAST threshold for keypoint detection at initial level
+# ORBextractor.minThFAST: 7  # FAST threshold for keypoint detection at subsequent levels
+
+# ORBextractor.nLevels: 10   # Number of levels in the scale pyramid
+ORBextractor.iniThFAST: 15   # FAST threshold for keypoint detection at initial level  Lower for more sensitive feature detection
+ORBextractor.minThFAST: 5  # FA/ST threshold for keypoint detection at subsequent levels  Keep this lower for tracking more keypoints
+  
