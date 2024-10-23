@@ -64,6 +64,16 @@ To deploy this project, run the launch file to launch all the 3 nodes
 
 ```
 
+## To View Octomap
+
+Use the octomap.bt and visualize it in octavis package
+
+```bash
+  cd ~/ros2_ws/    (directory where you have your octomap.bt)
+  octovis octomap.bt
+
+```
+
 
 ## Note
 
@@ -85,3 +95,15 @@ Pass appropriate data in Node 1 when running just node 1 or edit the launch file
 - Use a Multi-threaded ROS Executor: To ensure smooth execution of different callbacks.
 - Integrate Open3d for Fast and Efficient 3D map Implementation
 
+
+## ORBSLAM3 
+
+![App Screenshot](https://github.com/Pavan-r-shetty/multi_node_ROS2/blob/main/orb.JPG)
+
+## ORBSLAM3 feature mapping view
+
+![App Screenshot](https://github.com/Pavan-r-shetty/multi_node_ROS2/blob/main/orbcurrent.JPG)
+
+## Point Cloud Pangolin view 
+
+![App Screenshot](https://github.com/Pavan-r-shetty/multi_node_ROS2/blob/main/pcl.JPG)
