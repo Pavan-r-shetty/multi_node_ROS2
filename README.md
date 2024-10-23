@@ -112,5 +112,5 @@ Use the octomap.bt and visualize it in octavis package
 
 ## Video 
 
-![App Screenshot](https://drive.google.com/file/d/1WPAPif6z77XQIE60n0eZV3JEE_J1i6OP/view?usp=sharing) 
+https://drive.google.com/file/d/1WPAPif6z77XQIE60n0eZV3JEE_J1i6OP/view?usp=sharing
 
