@@ -109,3 +109,7 @@ Use the octomap.bt and visualize it in octavis package
 ## Point Cloud Pangolin view 
 
 ![App Screenshot](https://github.com/Pavan-r-shetty/multi_node_ROS2/blob/main/pcl.JPG)
+
+# nms web
+https://drive.google.com/file/d/1WPAPif6z77XQIE60n0eZV3JEE_J1i6OP/view?usp=sharing 
+
