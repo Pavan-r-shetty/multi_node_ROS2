@@ -77,23 +77,25 @@ Use the octomap.bt and visualize it in octavis package
 
 ## Note
 
-Pass appropriate data in Node 1 when running just node 1 or edit the launch file with the dataset path. I have used straight section where ORBSLAM3 tracking was relatively better. 
+- Ensure that the correct data is passed into Node 1 when running it independently, or update the launch file with the appropriate dataset path. I used the straight section for testing where ORBSLAM3 tracking performed relatively better
+- The overall performance heavily relies on ORBSLAM3's ability to detect features and maintain consistent local map tracking. 
+- I tested it on the straight section where the tracking is better compared to other sections, although the performance is still suboptimal in an absolute sense.
 ## Challenges in Node 2
 
-- You will need to use some kind of synchronization so that the correct depth and left pair are subscribed. 
-- I have used a custom function with the help of buffers since I had trouble integrating sync policy using message filters 
-- ORBSLAM3 build challenge, use the help of links from Acknowledgement section
-- Integrate ORBSLAM3 with node 2 by passing absolute paths of ORBSLAM3 and Pangolin in CMakeLists 
-- Pangolin needs to be built seperately along with OpenCV
+- Proper synchronization is needed to ensure the correct depth and left image pair is subscribed. 
+- I implemented a custom function using buffers due to difficulties in integrating sync policy with message filters.
+- There might be challenges in building ORBSLAM3; refer to the links in the Acknowledgements section for assistance.
+- To integrate ORBSLAM3 with Node 2, make sure to pass the absolute paths for ORBSLAM3 and Pangolin in the CMakeLists. 
+- Pangolin should be built separately, along with OpenCV.
 
 
 ## Challenges in Node 3
 
-- Downsample the Point Cloud: Use a voxel grid filter to reduce the point cloud size.
-- Asynchronous Callbacks: Process incoming messages without blocking.
-- Adjust OctoMap Updates: Update OctoMap only at intervals, reducing the frequency of updates.
-- Use a Multi-threaded ROS Executor: To ensure smooth execution of different callbacks.
-- Integrate Open3d for Fast and Efficient 3D map Implementation
+- Point Cloud Downsampling: Apply a voxel grid filter to reduce the size of the point cloud for better processing efficiency.
+- Asynchronous Callbacks: Ensure that incoming messages are processed asynchronously to avoid blocking other tasks.
+- Optimizing OctoMap Updates: Limit the frequency of OctoMap updates by performing them at set intervals, improving overall performance.
+- Multi-threaded ROS Executor: Use a multi-threaded ROS executor to handle multiple callbacks simultaneously, ensuring smooth execution.
+- Open3D Integration: Integrate Open3D for faster and more efficient 3D map implementations.
 
 
 ## ORBSLAM3 
